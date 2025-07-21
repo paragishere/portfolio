@@ -1,0 +1,134 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f8f9fc, #e6ecf0);
+  color: #1c1c1c;
+  line-height: 1.7;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+  transition: background 0.5s ease;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 50px 20px 30px;
+  background: linear-gradient(135deg, #ffffff, #f0f5f9);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  animation: fadeInDown 1s ease;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #000000; /* Set name color to solid black */
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 8px;
+}
+
+.links {
+  margin-top: 15px;
+}
+
+.links a {
+  margin: 0 10px;
+  color: #0077cc;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.links a:hover {
+  color: #003366;
+  border-bottom: 2px solid #003366;
+}
+
+/* SECTIONS */
+section {
+  padding: 30px 20px;
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  animation: fadeIn 0.8s ease-in;
+}
+
+section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  border-left: 5px solid #4dc3ff;
+  padding-left: 12px;
+  color: #333;
+}
+
+section p, li {
+  font-size: 1rem;
+  color: #444;
+}
+
+ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 40px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInDown {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 20px 15px;
+  }
+
+  .links a {
+    display: inline-block;
+    margin: 6px 8px;
+  }
+}
