@@ -1,68 +1,686 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Parag Malvi | Cybersecurity Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <title>Parag Malvi | Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+            overflow-x: hidden;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #2563eb, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .hero-bg {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(to right, #93c5fd, #c4b5fd);
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.25;
+            top: -120px;
+            right: -120px;
+            z-index: -1;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            transition: 0.35s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+            transition: 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .tag {
+            background: #eff6ff;
+            color: #2563eb;
+            border: 1px solid #bfdbfe;
+        }
+
+        .section-title {
+            font-size: 2.3rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #0f172a;
+        }
+
+        .muted {
+            color: #64748b;
+        }
+
+        .timeline-line {
+            border-left: 2px solid #e2e8f0;
+        }
+
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            background: #2563eb;
+            border-radius: 999px;
+            position: absolute;
+            left: -7px;
+            top: 5px;
+        }
+
+        .social-link:hover {
+            color: #2563eb;
+        }
+    </style>
 </head>
+
 <body>
-  <header>
-    <h1>Parag Malvi</h1>
-    <p>Web Pentester | Cybersecurity Enthusiast</p>
-    <div class="links">
-      <a href="mailto:paragmalvi1986@gmail.com">Email</a> |
-      <a href="https://github.com/paragishere" target="_blank">GitHub</a> |
-      <a href="https://www.linkedin.com/in/parag-malvi-b52330281/" target="_blank">LinkedIn</a> |
-      <a href="parag_resume.pdf" download>Download Resume</a>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar fixed top-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
+            <h1 class="text-2xl font-bold tracking-tight">
+                PARAG<span class="gradient-text">MALVI</span>
+            </h1>
+
+            <div class="hidden md:flex items-center gap-10 text-sm font-medium text-slate-600">
+
+                <a href="#about" class="hover:text-blue-600 transition">
+                    About
+                </a>
+
+                <a href="#projects" class="hover:text-blue-600 transition">
+                    Projects
+                </a>
+
+                <a href="#experience" class="hover:text-blue-600 transition">
+                    Experience
+                </a>
+
+                <a href="#skills" class="hover:text-blue-600 transition">
+                    Skills
+                </a>
+
+                <div class="flex justify-center flex-wrap gap-6 text-lg font-medium">
+
+    <a href="https://github.com/paragishere"
+        target="_blank"
+        class="social-link text-slate-600 hover:text-blue-600 transition duration-300">
+        GitHub
+    </a>
+
+    <a href="https://www.linkedin.com/in/parag-malvi-b52330281/"
+        target="_blank"
+        class="social-link text-slate-600 hover:text-blue-600 transition duration-300">
+        LinkedIn
+    </a>
+
+   <a href="mailto:paragmalvi1986@gmail.com"
+    class="social-link text-slate-600 hover:text-red-500 transition duration-300">
+
+    Gmail
+
+</a>
+
+</div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+
+    <section id="about"
+        class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+
+        <div class="hero-bg"></div>
+
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
+
+            <div>
+
+                <div
+                    class="tag px-4 py-2 rounded-full text-sm font-medium inline-flex items-center mb-7">
+                    Cybersecurity • Full Stack Development • AI Security
+                </div>
+
+                <h1
+                    class="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight mb-8">
+
+                    Building
+                    <span class="gradient-text">
+                        Secure
+                    </span>
+                    & Modern Digital Experiences
+
+                </h1>
+
+                <p
+                    class="text-lg text-slate-500 leading-relaxed max-w-2xl mb-10">
+
+                    Cybersecurity enthusiast and full stack developer focused on
+                    building scalable web applications, AI-powered security tools,
+                    vulnerability scanners, and modern digital solutions.
+
+                </p>
+
+                <div class="flex flex-wrap gap-5">
+
+                    <a href="#projects"
+                        class="btn-primary px-8 py-4 rounded-2xl font-semibold">
+                        View Projects
+                    </a>
+
+                    <a href="#contact"
+                        class="border border-slate-300 px-8 py-4 rounded-2xl font-semibold hover:border-blue-500 hover:text-blue-600 transition">
+                        Contact Me
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="flex justify-center">
+
+                <div
+                    class="w-[340px] h-[340px] rounded-[40px] bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center shadow-2xl">
+
+                    <div
+                        class="w-[280px] h-[280px] rounded-[35px] bg-white flex items-center justify-center text-center p-8">
+
+                        <div>
+
+                            <h2 class="text-3xl font-bold mb-3">
+                                Parag Malvi
+                            </h2>
+
+                            <p class="muted leading-relaxed">
+                                Cybersecurity Researcher <br>
+                                Full Stack Developer <br>
+                                Ethical Hacker
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section id="projects" class="py-28">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <h2 class="section-title">
+                Featured Projects
+            </h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- CARD -->
+
+            
+
+                <!-- CARD -->
+
+                <div class="card rounded-3xl p-7">
+
+                    <div class="mb-5">
+                        <span class="tag px-3 py-1 rounded-full text-xs">
+                            Cybersecurity
+                        </span>
+                    </div>
+
+                    <h3 class="text-2xl font-bold mb-3">
+                        ScanIt Vulnerability Scanner
+                    </h3>
+
+                    <p class="muted leading-relaxed mb-6">
+                        Security scanner capable of detecting SQL injection,
+                        sensitive paths, missing headers, and common
+                        web vulnerabilities.
+                    </p>
+
+                    <div class="flex gap-4 text-sm font-medium">
+
+                        <a href="https://scanit.qzz.io"
+                            class="text-blue-600 hover:underline">
+                            Live Demo
+                        </a>
+
+                        <a href="https://github.com/paragishere/ScanIt"
+                            class="text-slate-500 hover:text-black">
+                            GitHub
+                        </a>
+
+                    </div>
+
+                </div>
+    <div class="card rounded-3xl p-7">
+
+                    <div class="mb-5">
+                        <span class="tag px-3 py-1 rounded-full text-xs">
+                            AI/ML
+                        </span>
+                    </div>
+
+                    <h3 class="text-2xl font-bold mb-3">
+                        Anti-India Campaign Detection
+                    </h3>
+
+                    <p class="muted leading-relaxed mb-6">
+                        AI/ML platform using Transformer models and Hugging Face
+                        for detecting harmful social media campaigns and online
+                        misinformation.
+                    </p>
+
+                    <div class="flex gap-4 text-sm font-medium">
+
+                        <a href="https://parag.qzz.io"
+                            class="text-blue-600 hover:underline">
+                            Live Demo
+                        </a>
+
+                        <a href="https://github.com/paragishere/anti_india_detection"
+                            class="text-slate-500 hover:text-black">
+                            GitHub
+                        </a>
+
+                    </div>
+
+                </div>
+                <!-- CARD -->
+
+                <div class="card rounded-3xl p-7">
+
+                    <div class="mb-5">
+                        <span class="tag px-3 py-1 rounded-full text-xs">
+                            Privacy
+                        </span>
+                    </div>
+
+                    <h3 class="text-2xl font-bold mb-3">
+                        Secure File Sharing
+                    </h3>
+
+                    <p class="muted leading-relaxed mb-6">
+                        Privacy-focused encrypted file-sharing platform with
+                        zero-storage architecture and temporary peer transfers.
+                    </p>
+
+                    <div class="flex gap-4 text-sm font-medium">
+
+                        <a href="https://github.com/paragishere/CRUst_share"
+                            class="text-slate-500 hover:text-black">
+                            GitHub
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="card rounded-3xl p-7">
+
+                    <div class="mb-5">
+                        <span class="tag px-3 py-1 rounded-full text-xs">
+                            Android Security
+                        </span>
+                    </div>
+
+                    <h3 class="text-2xl font-bold mb-3">
+                        DIVA Security Assessment
+                    </h3>
+
+                    <p class="muted leading-relaxed mb-6">
+                        Android vulnerability analysis project focused on insecure
+                        storage, exported components, and static analysis.
+                    </p>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="card rounded-3xl p-7">
+
+                    <div class="mb-5">
+                        <span class="tag px-3 py-1 rounded-full text-xs">
+                            Deep Learning
+                        </span>
+                    </div>
+
+                    <h3 class="text-2xl font-bold mb-3">
+                        Deepfake Detection
+                    </h3>
+
+                    <p class="muted leading-relaxed mb-6">
+                        Deep learning based forensic analysis tool for detecting
+                        manipulated images and synthetic videos.
+                    </p>
+
+                    <div class="flex gap-4 text-sm font-medium">
+
+                        <a href="https://github.com/paragishere/ZipDeepFake"
+                            class="text-slate-500 hover:text-black">
+                            GitHub
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EXPERIENCE -->
+
+    <section id="experience" class="py-28 bg-white">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="grid md:grid-cols-2 gap-16">
+
+                <!-- LEFT -->
+
+                <div>
+
+    <h2 class="section-title">
+        Experience
+    </h2>
+
+    <div class="timeline-line pl-10 space-y-12">
+
+        <!-- Cybersecurity -->
+
+        <div class="relative">
+
+    <h3 class="font-bold text-lg sm:text-xl mb-2">
+        Cybersecurity Intern – CSI Cyber Secured India (3 Months)
+    </h3>
+
+    <p class="muted text-sm sm:text-base leading-relaxed">
+
+        Learned web application security, vulnerability assessment concepts,
+        Linux, networking, and cloud security fundamentals.
+
+        <br><br>
+
+        Gained exposure to Web VAPT methodologies,
+        reconnaissance techniques, security tools,
+        and penetration testing practices through practical training
+        and lab activities.
+
+        <br><br>
+
+        Worked on security assessment workflows,
+        vulnerability identification,
+        and web security testing concepts.
+
+    </p>
+
+</div>
+
+        <!-- AICTSL -->
+
+        <div class="relative">
+
+    <h3 class="font-bold text-lg sm:text-xl mb-2">
+        Intern – AICTSL, Indore (45 Days)
+    </h3>
+
+    <p class="muted text-sm sm:text-base leading-relaxed">
+
+        Explored digital infrastructure, operational workflow systems,
+        and smart transportation technologies used in public transport management.
+        Studied GPS-based tracking systems, real-time monitoring workflows,
+        ticketing infrastructure, and technology integration for operational
+        efficiency and route management.
+
+        <br><br>
+
+        Learned how smart systems improve passenger management,
+        monitoring, and transportation coordination.
+
+    </p>
+
+</div>
+
+        <!-- Freelance -->
+<div class="relative">
+
+    <h3 class="font-bold text-lg sm:text-xl mb-2">
+        Freelance Full Stack Web Developer
+    </h3>
+
+    <p class="muted text-sm sm:text-base leading-relaxed">
+
+        Developed web applications using PHP, Flask, and Django
+        for freelance and personal projects. Worked on backend systems,
+        deployment, hosting, database integration, authentication systems,
+        REST APIs, and responsive user interfaces.
+
+        <br><br>
+
+        Built admin dashboards, management panels,
+        and full stack applications with real-world deployment experience.
+        Managed domain configuration, hosting setup,
+        HTTPS integration, and application maintenance.
+
+    </p>
+
+</div>
+        <!-- Hackathons -->
+
+       <div class="relative">
+
+    <h3 class="font-bold text-lg sm:text-xl mb-2">
+        Hackathons & CTF Competitions
+    </h3>
+
+    <p class="muted text-sm sm:text-base leading-relaxed">
+
+        Participated in multiple hackathons and cybersecurity competitions
+        focused on innovation, development, and problem-solving.
+
+        <br><br>
+
+        • Prayatna 36-Hour Hackathon <br>
+        • CTF Competition by Indore Cyber Cell at AITR Indore — Secured 10th Rank <br>
+        • SKITM 48-Hour Hackathon
+
+    </p>
+
+</div>
     </div>
-  </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>B.Tech CSE student at IES IPS Academy (2023–2027). I’m passionate about web application penetration testing, ethical hacking, and digital forensics.</p>
-  </section>
+</div>
 
-  <section>
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Secure File Sharing Platform:</strong> A privacy-focused app using AES encryption and Flask backend.</li>
-      <li><strong>DIVA App Pentest:</strong> Exploited known mobile vulnerabilities for practical learning.</li>
-    </ul>
-  </section>
+                <!-- RIGHT -->
 
-<section id="certificates">
-  <h2>Certificates</h2>
-  <ul>
-    <li>
-      <a href="https://drive.google.com/drive/folders/1ufekH4bEunXVlUrmVQjkpQbvPgxsjOIa" target="_blank">Metasploit and Spring Boot Certificate</a>
-    </li>
-    <li>
-      <a href="https://drive.google.com/drive/folders/1ufekH4bEunXVlUrmVQjkpQbvPgxsjOIa" target="_blank">Cybersecurity & Digital Forensics Internship</a>
-    </li>
-    <li>
-      <a href="https://drive.google.com/drive/folders/1ufekH4bEunXVlUrmVQjkpQbvPgxsjOIa" target="_blank">CTF Participation Certificate - Indore Police</a>
-    </li>
-  </ul>
-</section>
+                <div id="skills">
 
+                    <h2 class="section-title">
+                        Skills & Certifications
+                    </h2>
 
-  <section>
-    <h2>CTF Experience</h2>
-    <p>Participated in CTF organized by Acropolis Institute & Indore Police, focusing on real-world web app exploits.</p>
-  </section>
+                    <div class="flex flex-wrap gap-3 mb-10">
 
-  <section>
-    <h2>Contact</h2>
-    <p>Email: paragmalvi1986@gmail.com</p>
-    <p>Phone: +91-9343570330</p>
-  </section>
+                        <span class="tag px-4 py-2 rounded-full">
+                            Python
+                        </span>
 
-  <footer>
-    <p>&copy; 2025 Parag Malvi</p>
-  </footer>
+                        <span class="tag px-4 py-2 rounded-full">
+                            Flask
+                        </span>
+
+                        <span class="tag px-4 py-2 rounded-full">
+                            Django
+                        </span>
+
+                        <span class="tag px-4 py-2 rounded-full">
+                            PHP
+                        </span>
+
+                        <span class="tag px-4 py-2 rounded-full">
+                            MongoDB
+                        </span>
+
+                        <span class="tag px-4 py-2 rounded-full">
+                            MySQL
+                        </span>
+
+                        <span class="tag px-4 py-2 rounded-full">
+                            JavaScript
+                        </span>
+
+                        <span class="tag px-4 py-2 rounded-full">
+                            Ethical Hacking
+                        </span>
+
+                    </div>
+
+                    <div class="space-y-4 muted">
+
+                        <p>
+                            • OPSWAT Certified (CIP, File & Email Security)
+                        </p>
+
+                        <p>
+                            • Certified API Hacking Junior (CAPIJ)
+                        </p>
+
+                        <p>
+                            • SOC Blue Teaming Training
+                        </p>
+
+                        <p>
+                            • Infosys Springboard - Metasploit
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="py-28">
+
+        <div class="max-w-4xl mx-auto px-6 text-center">
+
+            <h2 class="section-title">
+                Let's Build Something Amazing
+            </h2>
+
+            <p class="muted text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+    Open to collaborations, internships, cybersecurity projects,
+    freelance development, and innovative startup ideas.
+    Let’s connect and build something impactful.
+</p>
+
+            <div class="flex justify-center flex-wrap gap-6 text-lg">
+
+               <div class="flex gap-5 mt-10 text-sm text-slate-500">
+
+    <a href="https://github.com/paragishere"
+        target="_blank"
+        class="hover:text-black transition">
+        GitHub →
+    </a>
+
+    <a href="https://www.linkedin.com/in/parag-malvi-b52330281/"
+        target="_blank"
+        class="hover:text-blue-600 transition">
+        LinkedIn →
+    </a>
+
+    <a href="https://instagram.com/paraagmalvi"
+        target="_blank"
+        class="hover:text-pink-500 transition">
+        Instagram →
+    </a>
+<a href="mailto:paragmalvi1986@gmail.com"
+    class="social-link text-slate-600 hover:text-red-500 transition duration-300">
+
+    Email →
+
+</a>
+</div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer
+        class="py-10 text-center text-slate-400 border-t border-slate-200">
+
+        © 2026 Parag Malvi — Designed with HTML, TailwindCSS & ❤️
+
+    </footer>
+
 </body>
+
 </html>
